@@ -55,7 +55,8 @@ nav,
 	gap: 0.4rem;
 	cursor: pointer;
 }
-.nav__links > div > img {
+.nav__links > div > img,
+#mobile_menu > div > img {
 	width: 2.5rem;
 }
 .menu {
@@ -77,18 +78,17 @@ nav,
 	border-bottom: 1px solid var(--black);
 	margin-bottom: 0.5rem;
 }
-#mobile_menu .btn {
-	border-bottom: none;
-	display: inline !important;
-	text-align: center;
-	padding: 0.3rem 2rem;
-	background-color: var(--green);
-	color: var(--white);
-	border-radius: 4rem;
-	font-weight: 400;
-	margin-bottom: 0.6rem;
+
+#mobile_menu .fa-bell {
+	display: inline;
+}
+#mobile_menu > div {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 #mobile_menu {
+	width: 10rem;
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
@@ -126,6 +126,57 @@ nav,
 	padding-block: 0.3rem;
 	border-radius: 4rem;
 }
+
+.sub_menu {
+	display: none;
+}
+.sub_menu > .fa-ellipsis-vertical {
+	padding-inline: 1rem;
+	padding-block: 0.5rem;
+	margin-inline: 1rem;
+	border: 1px solid var(--lightGreen);
+}
+#sub_nav_mobile_menu {
+	display: block;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding-block: 1rem;
+	padding-inline: 1.5rem;
+	position: absolute;
+	left: -55%;
+	top: 7rem;
+	background-color: var(--white);
+	box-shadow: var(--box_shadow);
+	color: var(--black);
+	z-index: 1000;
+	transition: 0.6s ease-in-out;
+}
+#sub_nav_mobile_menu a {
+	display: block;
+	padding-block: 0.4rem;
+	text-decoration: none;
+	color: var(--black);
+	font-family: Sintony;
+	font-size: 1rem;
+	width: 100%;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
+	border-bottom: 1px solid var(--black);
+	margin-bottom: 0.5rem;
+}
+
+#sub_nav_mobile_menu .btn {
+	border-bottom: none;
+	text-align: center;
+	padding: 0.3rem 2rem;
+	background-color: var(--green);
+	color: var(--white);
+	border-radius: 4rem;
+	font-weight: 400;
+	margin-block: 0.6rem;
+}
 main {
 	display: flex;
 	gap: 1rem;
@@ -139,6 +190,7 @@ main {
 }
 form {
 	position: relative;
+	margin-block: 1rem;
 }
 form i {
 	margin-left: 0.4rem;
@@ -173,6 +225,9 @@ form input {
 	text-decoration: none;
 	margin-top: 0.7rem;
 }
+.button {
+	padding-inline: 2rem;
+}
 
 .fa-arrow-down {
 	border: 1px solid var(--black);
@@ -182,9 +237,23 @@ form input {
 	margin-block: 1.5rem;
 }
 
-#selected_recipes{
+#selected_recipes {
 	margin-block: 1.5rem;
 	margin: auto;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+}
+#selected_recipes .selected_btn {
+	padding-inline: 1rem;
+	padding-block: 0.3rem;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	border: none;
+	background-color: var(--white);
 }
 .food_container {
 	width: 50%;
@@ -193,4 +262,51 @@ form input {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+}
+
+@media (max-width: 769px) {
+	nav {
+		padding-inline: 1.3rem;
+	}
+	.nav__links {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+	#mobile_menu {
+		display: none;
+	}
+	.sub_nav,
+	.food_container {
+		display: none;
+	}
+	.sub_menu {
+		display: block;
+	}
+	.discover_recipes {
+		width: 100%;
+		border: 1px solid var(--lightGreen);
+		border-radius: 1rem;
+		box-shadow: var(--box_shadow);
+		margin: 1rem;
+		padding: 1rem;
+	}
+	.kitchen_finds {
+		width: auto;
+	}
+}
+
+@media (max-width: 425px) {
+	.bgImg {
+		display: none;
+	}
+	.create_account {
+		width: 100%;
+		padding-inline: 1rem;
+		padding-block: 0.8rem;
+	}
+	form > button {
+		width: 10rem;
+	}
 }
