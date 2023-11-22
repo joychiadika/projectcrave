@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/recipe_database.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Crave_recipe_database</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="/images/logo.png" alt="logo" />
+				<div class="nav__links">
+					<a href="#">Home</a>
+					<a href="#">About Us</a>
+					<a href="#">Category <i class="fa-solid fa-caret-down"></i></a>
+					<a href="#">Recipes</a>
+					<a href="#">Blogs</a>
+					<a href="#">Contact Us</a>
+
+					<div>
+						<a href="#"><i class="fa-solid fa-bell"></i></a>
+						<img src="/images/profile_image.svg" alt="profile_image" />
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+				<div id="mobile_menu">
+					<a href="#">Home</a>
+					<a href="#">About Us</a>
+					<a href="#">Category</a>
+					<a href="#">Recipes</a>
+					<a href="#">Blogs</a>
+					<a href="#">Contact Us</a>
+					<div>
+						<i class="fa-solid fa-bell"></i>
+						<img src="/images/profile_image.svg" alt="profile_image" />
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+				<div class="menu"><i class="fa-solid fa-bars"></i></div>
+			</nav>
+			<nav class="sub_nav">
+				<a href="#" class="btn"
+					>Switch Language<i class="fa-solid fa-caret-down"></i
+				></a>
+				<a href="#">Meal Planning</a>
+				<a href="#">Book a Class</a>
+				<a href="#" class="btn">Join Community</a>
+			</nav>
+			<div id="sub_nav_mobile_menu">
+				<a href="#">Meal Planning</a>
+				<a href="#">Book a Class</a>
+				<a href="#" class="btn"
+					>Switch Language <i class="fa-solid fa-caret-down"></i
+				></a>
+				<a href="#" class="btn">Join Community</a>
+			</div>
+			<div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+		</header>
+		<main>
+			<div class="discover_recipes">
+				<h2>Discover recipes with the ingredient you have at home</h2>
+				<form action="">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<input
+						type="search"
+						name="What’s in your kitchen?"
+						id="What’s in your kitchen?"
+						placeholder="What's in your kitchen?"
+						required
+					/>
+				</form>
+				<div class="kitchen_finds">
+					<button type="button">Butter</button>
+					<button type="button">Flour</button>
+					<button type="button">Parsley</button>
+					<button type="button">Pumpkin</button>
+					<button type="button">Fish</button>
+					<button type="button">Milk</button>
+					<button type="button">onions</button>
+					<button type="button">Hot dog</button>
+					<button type="button">Carrots</button>
+					<button type="button">Eggs</button>
+					<button type="button">Corn</button>
+					<button type="button">Honey</button>
+					<button type="button">Margarine</button>
+					<button type="button">Ginger</button>
+					<button type="button">Spinach</button>
+					<button type="button">Bread</button>
+					<button type="button">Oil</button>
+				</div>
+				<i class="fa-solid fa-arrow-down"></i>
+				<div id="selected_recipes">
+					<button type="button" class="selected_btn">
+						Oil <i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+				<a href="#" class="button">Get Recipes</a>
+			</div>
+			<div class="food_container"></div>
+		</main>
+		<script src="/javascript/recipe_database.js"></script>
+	</body>
+</html>
