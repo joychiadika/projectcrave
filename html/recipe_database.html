@@ -3,6 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="/css/recipe_database.css" />
 		<link
 			rel="stylesheet"
@@ -24,7 +30,42 @@
 				<div class="nav__links">
 					<a href="#">Home</a>
 					<a href="#">About Us</a>
-					<a href="#">Category <i class="fa-solid fa-caret-down"></i></a>
+					<div class="dropdown">
+						<button
+							class="btn fw-bold dropdown-toggle"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Category
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<button class="dropdown-item" type="button">
+									Types of Recipes
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Cooking Methods
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Dietary Preference
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Food Allergies
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Health Conditions
+								</button>
+							</li>
+						</ul>
+					</div>
 					<a href="#">Recipes</a>
 					<a href="#">Blogs</a>
 					<a href="#">Contact Us</a>
@@ -38,7 +79,42 @@
 				<div id="mobile_menu">
 					<a href="#">Home</a>
 					<a href="#">About Us</a>
-					<a href="#">Category</a>
+					<div class="dropdown border-bottom border-dark">
+						<button
+							class="btn ps-0 fw-bold dropdown-toggle"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Category
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<button class="dropdown-item" type="button">
+									Types of Recipes
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Cooking Methods
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Dietary Preference
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Food Allergies
+								</button>
+							</li>
+							<li>
+								<button class="dropdown-item" type="button">
+									Health Conditions
+								</button>
+							</li>
+						</ul>
+					</div>
 					<a href="#">Recipes</a>
 					<a href="#">Blogs</a>
 					<a href="#">Contact Us</a>
@@ -110,6 +186,11 @@
 			</div>
 			<div class="food_container"></div>
 		</main>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
 		<script src="/javascript/recipe_database.js"></script>
 	</body>
 </html>
