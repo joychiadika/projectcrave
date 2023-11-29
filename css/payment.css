@@ -14,6 +14,7 @@
 	--orange: #f00;
 	--box_shadow: rgba(0, 0, 0, 0.12);
 	--neutralColor: #fbfbfb;
+	--offsetWhite: #8f8f8f;
 }
 
 nav {
@@ -178,77 +179,81 @@ nav,
 	font-weight: 400;
 	margin-block: 0.6rem;
 }
-#sidebar {
-	display: flex;
-	width: 291px;
-	height: 1346px;
-	padding: 70px 30px;
-	flex-direction: column;
-	gap: 2px;
-	flex-shrink: 0;
-	border-right: 2px solid var(--orange) !important;
-	background: var(--neutralColor) !important;
-	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.37);
-}
 
-#profile_image {
-	width: 200px;
-	height: 200px;
-}
-#profile_info h4 {
-	color: var(--black);
-	font-family: Sintony;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 24px;
-	letter-spacing: 0.09px;
-}
-
-#profile_info h5 {
-	color: var(--black);
-	font-family: Sintony;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 16px; /* 114.286% */
-	letter-spacing: 0.056px;
-}
-#account_modal_btn:active {
-	border: none;
-}
-.Change {
-	color: var(--green);
-	font-weight: 700;
-	line-height: 24px;
-}
-#Cancel {
-	background-color: rgba(255, 94, 3, 0.93);
-	color: var(--white);
-}
-#save {
-	background-color: var(--green);
-	color: var(--white);
-}
-
-.form-control,
-.form-select {
-	border-color: var(--green);
-}
-#Subcribe{
-	background-color: var(--green);
-	color: var(--white);
-}
-#jinjar{
-	background-color: var(--green);
-	color: var(--white);
-}
-#meal_planning_btn{
+#meal_planning_btn {
 	background-color: transparent;
 	border: none;
 	color: var(--white);
 }
 
+form input {
+	border-color: var(--green) !important;
+}
+
+input:checked {
+	background-color: var(--orange) !important;
+}
+.submit_btn {
+	text-decoration: none;
+	color: var(--white);
+	background-color: var(--green);
+	padding-block: 0.7rem;
+	border-radius: 2rem;
+	padding-inline: 7rem;
+	border: none;
+}
+/* footer styling */
+footer {
+	background-color: var(--green);
+}
+
+.footer-list h3 {
+	color: var(--white);
+	font-weight: bold;
+}
+.footer-list a,
+.footer-list p {
+	text-decoration: none;
+	color: var(--offsetWhite);
+	color: var(--8F8F8F, #fff);
+	font-family: Sintony;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0.016px;
+	margin-bottom: 1rem;
+}
+
+.footer-list button {
+	background-color: var(--orange);
+	display: flex;
+	width: 301px;
+	height: 40px;
+	margin: auto;
+	padding: 12px 24px;
+	align-items: center;
+	gap: 8px;
+	border: none;
+	border-radius: 2rem;
+}
+.Newsletter {
+	color: var(--white);
+	background-color: var(--orange);
+	padding-block: 0.3rem;
+	border-radius: 1rem;
+	padding-inline: 3rem;
+	border: none;
+	margin-left: -5rem;
+}
+
+#Newsletter_email {
+	padding-block: 0.3rem;
+	border-radius: 1rem !important;
+	padding-right: 3rem;
+	padding-left: 1rem;
+	border: none;
+}
 @media (max-width: 769px) {
 	nav {
 		padding-inline: 1.3rem;

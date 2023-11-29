@@ -178,75 +178,37 @@ nav,
 	font-weight: 400;
 	margin-block: 0.6rem;
 }
-#sidebar {
-	display: flex;
-	width: 291px;
-	height: 1346px;
-	padding: 70px 30px;
-	flex-direction: column;
-	gap: 2px;
-	flex-shrink: 0;
-	border-right: 2px solid var(--orange) !important;
-	background: var(--neutralColor) !important;
-	box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.37);
-}
 
-#profile_image {
-	width: 200px;
-	height: 200px;
-}
-#profile_info h4 {
-	color: var(--black);
-	font-family: Sintony;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 24px;
-	letter-spacing: 0.09px;
-}
-
-#profile_info h5 {
-	color: var(--black);
-	font-family: Sintony;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 16px; /* 114.286% */
-	letter-spacing: 0.056px;
-}
-#account_modal_btn:active {
-	border: none;
-}
-.Change {
-	color: var(--green);
-	font-weight: 700;
-	line-height: 24px;
-}
-#Cancel {
-	background-color: rgba(255, 94, 3, 0.93);
-	color: var(--white);
-}
-#save {
-	background-color: var(--green);
-	color: var(--white);
-}
-
-.form-control,
-.form-select {
-	border-color: var(--green);
-}
-#Subcribe{
-	background-color: var(--green);
-	color: var(--white);
-}
-#jinjar{
-	background-color: var(--green);
-	color: var(--white);
-}
-#meal_planning_btn{
+#meal_planning_btn {
 	background-color: transparent;
 	border: none;
 	color: var(--white);
+}
+
+.subcribe_btn{
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding-block: 0.3rem;
+
+}
+.pricing{
+    border: 1px solid var(--orange);
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+    border-radius: 1rem;
+}
+
+.free_trial > button{
+    background-color: var(--green);
+    color: var(--white);
+    padding-block: 0.7 !important;
+    border-radius: 2rem;
+}
+
+.free_trial >div>a{
+    color: var(--black);
 }
 
 @media (max-width: 769px) {

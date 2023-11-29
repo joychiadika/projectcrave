@@ -130,7 +130,44 @@
 				<a href="#" class="btn"
 					>Multilingual Support<i class="fa-solid fa-caret-down"></i
 				></a>
-				<a href="#">Meal Planning</a>
+				<!-- Button trigger modal -->
+				<button
+					type="button"
+					id="meal_planning_btn"
+					data-bs-toggle="modal"
+					data-bs-target="#exampleModal"
+				>
+					Meal Planning
+				</button>
+
+				<!-- Modal -->
+				<div
+					class="modal fade"
+					id="exampleModal"
+					tabindex="-1"
+					aria-labelledby="exampleModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div
+								class="modal-header d-flex align-items-center justify-content-center border border-0"
+							>
+								<img src="/images/logo.png" alt="logo" />
+							</div>
+							<div id="jinjar" class="py-3 text-center">
+								<h2 class="mb-0">Talk to Jinjar</h2>
+								<p class="mb-0 fs-6">your culinary companion</p>
+							</div>
+							<div class="modal-body py-3 text-center">
+								<h1>Welcome</h1>
+								<p>To enjoy crave's AI recipe generator</p>
+								<a href="#" id="Subcribe" class="btn w-25 m-auto text-center">Subcribe</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <a href="#">Meal Planning</a> -->
 				<a href="#">Nutritional Information</a>
 				<a href="#">Book a Class</a>
 				<a href="#" class="btn">Join Community</a>
