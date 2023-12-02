@@ -263,7 +263,58 @@ form input {
 	background-size: contain;
 	background-position: center;
 }
+/* footer styling */
+footer {
+	background-color: var(--green);
+}
 
+.footer-list h3 {
+	color: var(--white);
+	font-weight: bold;
+}
+.footer-list a,
+.footer-list p {
+	text-decoration: none;
+	color: var(--offsetWhite);
+	color: var(--8F8F8F, #fff);
+	font-family: Sintony;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0.016px;
+	margin-bottom: 1rem;
+}
+
+.footer-list button {
+	background-color: var(--orange);
+	display: flex;
+	width: 301px;
+	height: 40px;
+	margin: auto;
+	padding: 12px 24px;
+	align-items: center;
+	gap: 8px;
+	border: none;
+	border-radius: 2rem;
+}
+.Newsletter {
+	color: var(--white);
+	background-color: var(--orange);
+	padding-block: 0.3rem;
+	border-radius: 1rem;
+	padding-inline: 3rem;
+	border: none;
+	margin-left: -5rem;
+}
+
+#Newsletter_email {
+	padding-block: 0.3rem;
+	border-radius: 1rem !important;
+	padding-right: 3rem;
+	padding-left: 1rem;
+	border: none;
+}
 @media (max-width: 769px) {
 	nav {
 		padding-inline: 1.3rem;
