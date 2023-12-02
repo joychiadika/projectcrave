@@ -185,30 +185,37 @@ nav,
 	color: var(--white);
 }
 
-.subcribe_btn{
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    border-radius: 2rem;
-    padding-block: 0.3rem;
-
+.subcribe_btn {
+	background-color: var(--green);
+	color: var(--white);
+	border: none;
+	border-radius: 2rem;
+	padding-block: 0.3rem;
 }
-.pricing{
-    border: 1px solid var(--orange);
-    padding-inline: 1rem;
-    padding-block: 1.5rem;
-    border-radius: 1rem;
-}
-
-.free_trial > button{
-    background-color: var(--green);
-    color: var(--white);
-    padding-block: 0.7 !important;
-    border-radius: 2rem;
+.pricing {
+	border: 1px solid var(--orange);
+	padding-inline: 1rem;
+	padding-block: 1.5rem;
+	border-radius: 1rem;
 }
 
-.free_trial >div>a{
-    color: var(--black);
+.free_trial > button {
+	background-color: var(--green);
+	color: var(--white);
+	padding-block: 0.7 !important;
+	border-radius: 2rem;
+}
+
+.free_trial > div > a {
+	color: var(--black);
+}
+#Subcribe {
+	background-color: var(--green);
+	color: var(--white);
+}
+#jinjar {
+	background-color: var(--green);
+	color: var(--white);
 }
 
 @media (max-width: 769px) {

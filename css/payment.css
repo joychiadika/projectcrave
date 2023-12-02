@@ -179,7 +179,14 @@ nav,
 	font-weight: 400;
 	margin-block: 0.6rem;
 }
-
+#Subcribe {
+	background-color: var(--green);
+	color: var(--white);
+}
+#jinjar {
+	background-color: var(--green);
+	color: var(--white);
+}
 #meal_planning_btn {
 	background-color: transparent;
 	border: none;
