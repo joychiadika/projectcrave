@@ -30,7 +30,7 @@ function displayCards() {
 				<img src="${cardsData.image}" alt="Gordon_Ramsay" />
 				<h5 class="my-2">${cardsData.chefName}</h5>
 				<p>${cardsData.restaurant}</p>
-				<a	href="#" class="save-btn text-decoration-none py-1 px-3 fw-bold text-dark rounded-pill"	>View Profile</a>
+				<a	href="#" class="save-btn text-white text-decoration-none py-1 px-3 fw-bold text-dark rounded-pill"	>View Profile</a>
 			</div>
     `;
 	});

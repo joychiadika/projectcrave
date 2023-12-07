@@ -12,6 +12,7 @@
 	--black: #000000;
 	--grey: #a4a7a4;
 	--orange: #f00;
+	--TertiaryColour: #ff5e03;
 	--box_shadow: rgba(0, 0, 0, 0.12);
 	--neutralColor: #fbfbfb;
 }
@@ -217,14 +218,23 @@ nav,
 #account_modal_btn:active {
 	border: none;
 }
-.Change {
-	color: var(--green);
+.change {
+	color: var(--green) !important;
 	font-weight: 700;
 	line-height: 24px;
 }
 #Cancel {
 	background-color: rgba(255, 94, 3, 0.93);
 	color: var(--white);
+}
+form textarea {
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
+	border-radius: 1.2rem;
+	border: 1px solid var(--green);
+	line-height: 1.2rem;
+	letter-spacing: 0.1rem;
+	margin-top: 0.3rem;
 }
 #save {
 	background-color: var(--green);
@@ -247,6 +257,21 @@ nav,
 	background-color: transparent;
 	border: none;
 	color: var(--white);
+}
+#edit_email:focus-visible {
+	border: none !important;
+}
+.edit_email_btn {
+	background-color: var(--green);
+	color: var(--white);
+}
+.form-switch .form-check-input {
+	background-color: var(--TertiaryColour);
+}
+
+.form-switch .form-check-input:checked {
+	border-color: var(--green) !important;
+	background-color: var(--green);
 }
 /* footer styling */
 footer {
