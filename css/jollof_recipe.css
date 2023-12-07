@@ -12,6 +12,7 @@
 	--black: #000000;
 	--grey: #a4a7a4;
 	--orange: #f00;
+	--TertiaryColour: #ff5e03;
 	--box_shadow: rgba(0, 0, 0, 0.12);
 	--neutralColor: #fbfbfb;
 	--yellow: #f8fb70;
@@ -287,6 +288,23 @@ nav,
 }
 .fa-regular.fa-star {
 	color: var(--green);
+}
+
+.review_card {
+	background-image: url(/images/review.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 484px;
+	height: 317px;
+	margin: auto;
+	border: 2px solid var(--TertiaryColour);
+}
+.review_btn {
+	background-color: var(--green);
+}
+.review_btn:hover {
+	background-color: var(--green);
 }
 
 /* footer styling */
