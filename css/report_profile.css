@@ -179,74 +179,6 @@ nav,
   font-weight: 400;
   margin-block: 0.6rem;
 }
-#sidebar {
-  display: flex;
-  width: 291px;
-  height: 1346px;
-  padding: 70px 30px;
-  flex-direction: column;
-  gap: 2px;
-  flex-shrink: 0;
-  border-right: 2px solid var(--orange) !important;
-  background: var(--neutralColor) !important;
-  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.37);
-}
-
-#profile_image {
-  width: 200px;
-  height: 200px;
-}
-#profile_info h4 {
-  color: var(--black);
-  font-family: Sintony;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.09px;
-}
-
-#profile_info h5 {
-  color: var(--black);
-  font-family: Sintony;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 16px; /* 114.286% */
-  letter-spacing: 0.056px;
-}
-#account_modal_btn:active {
-  border: none;
-}
-.Change {
-  color: var(--green) !important;
-  font-weight: 700;
-  line-height: 24px;
-}
-#Cancel {
-  background-color: rgba(255, 94, 3, 0.93);
-  color: var(--white);
-}
-form textarea {
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  border-radius: 1.2rem;
-  border: 1px solid var(--green);
-  line-height: 1.2rem;
-  letter-spacing: 0.1rem;
-  margin-top: 0.3rem;
-}
-#save,
-.Update {
-  background-color: var(--green) !important;
-  color: var(--white);
-  border: none;
-}
-
-.form-control,
-.form-select {
-  border-color: var(--green);
-}
 #Subcribe {
   background-color: var(--green);
   color: var(--white);
@@ -260,19 +192,16 @@ form textarea {
   border: none;
   color: var(--white);
 }
-#edit_email:focus-visible {
-  border: none !important;
+
+.form-check-input[type="checkbox"] {
+  border-color: var(--green);
 }
-.edit_email_btn {
+.form-check-input[type="checkbox"]:checked {
   background-color: var(--green);
-  color: var(--white);
-}
-.form-switch .form-check-input {
-  background-color: var(--TertiaryColour);
+  border-color: var(--green);
 }
 
-.form-switch .form-check-input:checked {
-  border-color: var(--green) !important;
+.report_profile_btn {
   background-color: var(--green);
 }
 /* footer styling */

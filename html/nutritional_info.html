@@ -1,332 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/nutritional_info.css" />
-    <title>Crave</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img src="/images/logo.png" alt="logo" />
-        <div class="nav__links">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <div class="dropdown">
-            <button
-              class="btn fw-bold dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Category
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <button class="dropdown-item" type="button">
-                  Types of Recipes
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Cooking Methods
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Dietary Preference
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Food Allergies
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Health Conditions
-                </button>
-              </li>
-            </ul>
-          </div>
-          <a href="#">Recipes</a>
-          <a href="#">Blogs</a>
-          <a href="#">Contact Us</a>
 
-          <div>
-            <a href="#"><i class="fa-solid fa-bell"></i></a>
-            <img src="/images/profile_image.svg" alt="profile_image" />
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-        </div>
-        <div id="mobile_menu">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <div class="dropdown border-bottom border-dark">
-            <button
-              class="btn ps-0 fw-bold dropdown-toggle"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Category
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <button class="dropdown-item" type="button">
-                  Types of Recipes
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Cooking Methods
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Dietary Preference
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Food Allergies
-                </button>
-              </li>
-              <li>
-                <button class="dropdown-item" type="button">
-                  Health Conditions
-                </button>
-              </li>
-            </ul>
-          </div>
-          <a href="#">Recipes</a>
-          <a href="#">Blogs</a>
-          <a href="#">Contact Us</a>
-          <div>
-            <i class="fa-solid fa-bell"></i>
-            <img src="/images/profile_image.svg" alt="profile_image" />
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-        </div>
-        <div class="menu"><i class="fa-solid fa-bars"></i></div>
-      </nav>
-      <nav class="sub_nav">
-        <a href="#" class="btn"
-          >Multilingual Support<i class="fa-solid fa-caret-down"></i
-        ></a>
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          id="meal_planning_btn"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Meal Planning
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/nutritional_info.css" />
+  <title>Crave</title>
+</head>
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div
-                class="modal-header d-flex align-items-center justify-content-center border border-0"
-              >
-                <img src="/images/logo.png" alt="logo" />
-              </div>
-              <div id="jinjar" class="py-3 text-center">
-                <h2 class="mb-0">Talk to Jinjar</h2>
-                <p class="mb-0 fs-6">your culinary companion</p>
-              </div>
-              <div class="modal-body py-3 text-center">
-                <h1>Welcome</h1>
-                <p>To enjoy crave's AI recipe generator</p>
-                <a
-                  href="/html/pricing.html"
-                  id="Subcribe"
-                  class="btn w-25 m-auto text-center"
-                  >Subcribe</a
-                >
-              </div>
+<body>
+  <header>
+    <nav>
+      <img src="/images/logo.png" alt="logo" />
+      <div class="nav__links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <div class="dropdown">
+          <button class="btn fw-bold dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">
+                Types of Recipes
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Cooking Methods
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Dietary Preference
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Food Allergies
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Health Conditions
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href="#">Recipes</a>
+        <a href="#">Blogs</a>
+        <a href="#">Contact Us</a>
+
+        <div>
+          <a href="#"><i class="fa-solid fa-bell"></i></a>
+          <img src="/images/profile_image.svg" alt="profile_image" />
+          <a href="/html/account_settings.html"><i class="fa-solid fa-caret-down"></i></a>
+        </div>
+      </div>
+      <div id="mobile_menu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <div class="dropdown border-bottom border-dark">
+          <button class="btn ps-0 fw-bold dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button class="dropdown-item" type="button">
+                Types of Recipes
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Cooking Methods
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Dietary Preference
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Food Allergies
+              </button>
+            </li>
+            <li>
+              <button class="dropdown-item" type="button">
+                Health Conditions
+              </button>
+            </li>
+          </ul>
+        </div>
+        <a href="#">Recipes</a>
+        <a href="#">Blogs</a>
+        <a href="#">Contact Us</a>
+        <div>
+          <i class="fa-solid fa-bell"></i>
+          <img src="/images/profile_image.svg" alt="profile_image" />
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+      <div class="menu"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <nav class="sub_nav">
+      <a href="#" class="btn">Multilingual Support<i class="fa-solid fa-caret-down"></i></a>
+      <!-- Button trigger modal -->
+      <button type="button" id="meal_planning_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Meal Planning
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-center border border-0">
+              <img src="/images/logo.png" alt="logo" />
+            </div>
+            <div id="jinjar" class="py-3 text-center">
+              <h2 class="mb-0">Talk to Jinjar</h2>
+              <p class="mb-0 fs-6">your culinary companion</p>
+            </div>
+            <div class="modal-body py-3 text-center">
+              <h1>Welcome</h1>
+              <p>To enjoy crave's AI recipe generator</p>
+              <a href="/html/pricing.html" id="Subcribe" class="btn w-25 m-auto text-center">Subcribe</a>
             </div>
           </div>
         </div>
-        <!-- <a href="#">Meal Planning</a> -->
-        <a href="/html/nutritional_info.html">Nutritional Information</a>
-        <a href="/html/book_a_class.html">Book a Class</a>
-        <a href="#" class="btn">Join Community</a>
-      </nav>
-      <div id="sub_nav_mobile_menu">
-        <a href="#">Meal Planning</a>
-        <a href="#">Book a Class</a>
-        <a href="#" class="btn"
-          >Multilingual Support <i class="fa-solid fa-caret-down"></i
-        ></a>
-        <a href="#" class="btn">Join Community</a>
       </div>
-      <div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-    </header>
-    <main class="">
-      <section class="px-5 py-5 w-100 chart_container">
-        <h2 class="mb-3">SPICY JOLLOF PASTA NUTRITIONAL INFORMATION</h2>
-        <p>
-          Spicy Jollof Pasta is not only a flavorful and satisfying dish but
-          also offers nutritional benefits. The pasta itself provides a good
-          source of complex carbohydrates, supplying energy for daily
-          activities. The spicy elements often comes from ingredients like
-          peppers, which are rich in vitamin A and C, contributing to immune
-          functions and skin health.
-        </p>
-        <div class="d-flex">
-          <div>
-            <div class="d-flex gap-4 align-items-center mb-5">
-              <img src="/images/spicy_jollof.svg" alt="spicy_jollof" />
-              <div>
-                <h3>SPICY JOLLOF PASTA</h3>
-                <p>Serving size: 1 plate (562g)</p>
-              </div>
-            </div>
-            <img src="/images/chart.svg" alt="chart" />
-          </div>
-          <div class="popular_reciepes">
-            <h5 class="mb-3">See other popular recipes</h5>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img src="/images/advocado_toast.svg" alt="advocado_toast" />
-              <p class="text-white fs-6 fw-light">Avocado Toast</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img src="/images/pancakes.svg" alt="pancakes" />
-              <p class="text-white fs-6 fw-light">Baked Pancakes</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img src="/images/french_co.svg" alt="french_co" />
-              <p class="text-white fs-6 fw-light">French Coq Au Vin</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img
-                src="/images/Boeuf_bourguignon.svg"
-                alt="Boeuf_bourguignon"
-              />
-              <p class="text-white fs-6 fw-light">Boeuf bourguignon</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img
-                src="/images/advocado_and_egg_toast.svg"
-                alt="advocado_and_egg_toast"
-              />
-              <p class="text-white fs-6 fw-light">Avocado and Egg Toast</p>
-            </div>
-            <div class="d-flex gap-3 align-items-center mb-3">
-              <img
-                src="/images/strawberry_french_crepe.svg"
-                alt="strawberry_french_crepe"
-              />
-              <p class="text-white fs-6 fw-light">Strawberry French Crepe</p>
-            </div>
-            <p class="text-white text-center fw-bold">See more</p>
-          </div>
-        </div>
-      </section>
-      <section class="nutritional px-5 py-5">
-        <h3 class="text-center py-3">Nutritional Information</h3>
-        <div
-          class="d-flex flex-wrap align-items-center justify-content-between gap-3"
-        >
-          <img src="/images/carbs_and_fat.svg" alt="carbs_and_fat" />
-          <img
-            src="/images/sodium_and_vitamins.svg"
-            alt="sodium_and_vitamins"
-          />
-        </div>
-        <p class="my-5 container">
-          While the exact nutritional content can vary based on specific
-          ingredients and cooking methods, Spicy Jollof Pasta can be part of a
-          balance diet, offering a combination of carbohydrate, proteins,
-          healthy fats, vitamins and minerals. It’s important to be mindful of
-          portion sizes and choose lean protein sources for a well-rounded and
-          nutritional meal.
-        </p>
-      </section>
-    </main>
-    <footer class="px-5">
-      <img src="/images/logo.png" alt="logo" class="bg-white rounded my-4" />
-      <div class="d-flex justify-content-between align-items-start">
-        <div class="d-flex flex-column footer-list">
-          <h3>Categories</h3>
-          <a href="#">Types of Recipes</a>
-          <a href="#">Cooking Methods</a>
-          <a href="#">Dietary Preference</a>
-          <a href="#">Food Allergies</a>
-          <a href="#">Health Conditions</a>
-          <a href="#">Blogs</a>
-          <a href="#">Meal Planner</a>
-          <a href="#">Join Community</a>
-        </div>
-        <div class="d-flex flex-column footer-list">
-          <h3 class="text-center">Contact</h3>
-          <p>
-            <img src="/images/location.png" alt="location_icon" /> Address : No
-            29 Adamolekun Street, Ajah Lagos State Nigeria
-          </p>
-          <p>
-            <img src="/images/Phone.png" alt="Phone_icon" /> Phone: +234
-            8123410961
-          </p>
-          <p>
-            <img src="/images/Email.png" alt="Email_icon" /> Email :
-            Project.thecrave@gmail.com
-          </p>
-        </div>
-        <div class="footer-list text-center">
-          <button>Subscribe to Newsletter</button>
-          <p>Connect with Us</p>
-          <img src="/images/Facebook - png.png" alt="Facebook_icon" />
-          <img src="/images/Instagram - jpeg.png" alt="Instagram_icon" />
-          <img src="/images/twitter logo 1.png" alt="twitter_icon" />
-        </div>
-      </div>
-      <div class="py-3">
-        <label for="Newsletter_email" class="me-3 text-white"
-          >Enter your email to get recipes of the day</label
-        >
-        <input
-          type="email"
-          id="Newsletter_email"
-          placeholder="Enter your email"
-          class="rounded w-25"
-        />
-        <button class="Newsletter">Submit</button>
-      </div>
-      <p class="text-center text-white mb-0 py-3">
-        Copyright 2019-2023 Crave - All rights reserved.
+      <!-- <a href="#">Meal Planning</a> -->
+      <a href="/html/nutritional_info.html">Nutritional Information</a>
+      <a href="/html/book_a_class.html">Book a Class</a>
+      <a href="#" class="btn">Join Community</a>
+    </nav>
+    <div id="sub_nav_mobile_menu">
+      <a href="#">Meal Planning</a>
+      <a href="#">Book a Class</a>
+      <a href="#" class="btn">Multilingual Support <i class="fa-solid fa-caret-down"></i></a>
+      <a href="#" class="btn">Join Community</a>
+    </div>
+    <div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+  </header>
+  <main class="">
+    <section class="px-5 py-5 w-100 chart_container">
+      <h2 class="mb-3">SPICY JOLLOF PASTA NUTRITIONAL INFORMATION</h2>
+      <p>
+        Spicy Jollof Pasta is not only a flavorful and satisfying dish but
+        also offers nutritional benefits. The pasta itself provides a good
+        source of complex carbohydrates, supplying energy for daily
+        activities. The spicy elements often comes from ingredients like
+        peppers, which are rich in vitamin A and C, contributing to immune
+        functions and skin health.
       </p>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/javascript/account_settings.js"></script>
-  </body>
+      <div class="d-flex">
+        <div>
+          <div class="d-flex gap-4 align-items-center mb-5">
+            <img src="/images/spicy_jollof.svg" alt="spicy_jollof" />
+            <div>
+              <h3>SPICY JOLLOF PASTA</h3>
+              <p>Serving size: 1 plate (562g)</p>
+            </div>
+          </div>
+          <img src="/images/chart.svg" alt="chart" />
+        </div>
+        <div class="popular_reciepes">
+          <h5 class="mb-3">See other popular recipes</h5>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/advocado_toast.svg" alt="advocado_toast" />
+            <p class="text-white fs-6 fw-light">Avocado Toast</p>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/pancakes.svg" alt="pancakes" />
+            <p class="text-white fs-6 fw-light">Baked Pancakes</p>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/french_co.svg" alt="french_co" />
+            <p class="text-white fs-6 fw-light">French Coq Au Vin</p>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/Boeuf_bourguignon.svg" alt="Boeuf_bourguignon" />
+            <p class="text-white fs-6 fw-light">Boeuf bourguignon</p>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/advocado_and_egg_toast.svg" alt="advocado_and_egg_toast" />
+            <p class="text-white fs-6 fw-light">Avocado and Egg Toast</p>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <img src="/images/strawberry_french_crepe.svg" alt="strawberry_french_crepe" />
+            <p class="text-white fs-6 fw-light">Strawberry French Crepe</p>
+          </div>
+          <p class="text-white text-center fw-bold">See more</p>
+        </div>
+      </div>
+    </section>
+    <section class="nutritional px-5 py-5">
+      <h3 class="text-center py-3">Nutritional Information</h3>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <img src="/images/carbs_and_fat.svg" alt="carbs_and_fat" />
+        <img src="/images/sodium_and_vitamins.svg" alt="sodium_and_vitamins" />
+      </div>
+      <p class="my-5 container">
+        While the exact nutritional content can vary based on specific
+        ingredients and cooking methods, Spicy Jollof Pasta can be part of a
+        balance diet, offering a combination of carbohydrate, proteins,
+        healthy fats, vitamins and minerals. It’s important to be mindful of
+        portion sizes and choose lean protein sources for a well-rounded and
+        nutritional meal.
+      </p>
+    </section>
+  </main>
+  <footer class="px-5">
+    <img src="/images/logo.png" alt="logo" class="bg-white rounded my-4" />
+    <div class="d-flex justify-content-between align-items-start">
+      <div class="d-flex flex-column footer-list">
+        <h3>Categories</h3>
+        <a href="#">Types of Recipes</a>
+        <a href="#">Cooking Methods</a>
+        <a href="#">Dietary Preference</a>
+        <a href="#">Food Allergies</a>
+        <a href="#">Health Conditions</a>
+        <a href="#">Blogs</a>
+        <a href="#">Meal Planner</a>
+        <a href="#">Join Community</a>
+      </div>
+      <div class="d-flex flex-column footer-list">
+        <h3 class="text-center">Contact</h3>
+        <p>
+          <img src="/images/location.png" alt="location_icon" /> Address : No
+          29 Adamolekun Street, Ajah Lagos State Nigeria
+        </p>
+        <p>
+          <img src="/images/Phone.png" alt="Phone_icon" /> Phone: +234
+          8123410961
+        </p>
+        <p>
+          <img src="/images/Email.png" alt="Email_icon" /> Email :
+          Project.thecrave@gmail.com
+        </p>
+      </div>
+      <div class="footer-list text-center">
+        <button>Subscribe to Newsletter</button>
+        <p>Connect with Us</p>
+        <img src="/images/Facebook - png.png" alt="Facebook_icon" />
+        <img src="/images/Instagram - jpeg.png" alt="Instagram_icon" />
+        <img src="/images/twitter logo 1.png" alt="twitter_icon" />
+      </div>
+    </div>
+    <div class="py-3">
+      <label for="Newsletter_email" class="me-3 text-white">Enter your email to get recipes of the day</label>
+      <input type="email" id="Newsletter_email" placeholder="Enter your email" class="rounded w-25" />
+      <button class="Newsletter">Submit</button>
+    </div>
+    <p class="text-center text-white mb-0 py-3">
+      Copyright 2019-2023 Crave - All rights reserved.
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <script src="/javascript/account_settings.js"></script>
+</body>
+
 </html>
