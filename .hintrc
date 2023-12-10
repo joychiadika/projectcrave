@@ -3,6 +3,17 @@
     "development"
   ],
   "hints": {
-    "axe/name-role-value": "off"
-  }
+    "axe/name-role-value": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 119"
+  ]
 }
