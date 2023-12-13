@@ -1,475 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="/css/jollof_recipe.css" />
-		<title>Crave_recipe_database</title>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<img src="/images/logo.png" alt="logo" />
-				<div class="nav__links">
-					<a href="#">Home</a>
-					<a href="#">About Us</a>
-					<div class="dropdown">
-						<button
-							class="btn fw-bold dropdown-toggle"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>
-							Category
-						</button>
-						<ul class="dropdown-menu">
-							<li>
-								<button class="dropdown-item" type="button">
-									Types of Recipes
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Cooking Methods
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Dietary Preference
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Food Allergies
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Health Conditions
-								</button>
-							</li>
-						</ul>
-					</div>
-					<a href="#">Recipes</a>
-					<a href="#">Blogs</a>
-					<a href="#">Contact Us</a>
 
-					<div>
-						<a href="#"><i class="fa-solid fa-bell"></i></a>
-						<img src="/images/profile_image.svg" alt="profile_image" />
-						<i class="fa-solid fa-caret-down"></i>
-					</div>
-				</div>
-				<div id="mobile_menu">
-					<a href="#">Home</a>
-					<a href="#">About Us</a>
-					<div class="dropdown border-bottom border-dark">
-						<button
-							class="btn ps-0 fw-bold dropdown-toggle"
-							data-bs-toggle="dropdown"
-							aria-expanded="false"
-						>
-							Category
-						</button>
-						<ul class="dropdown-menu">
-							<li>
-								<button class="dropdown-item" type="button">
-									Types of Recipes
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Cooking Methods
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Dietary Preference
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Food Allergies
-								</button>
-							</li>
-							<li>
-								<button class="dropdown-item" type="button">
-									Health Conditions
-								</button>
-							</li>
-						</ul>
-					</div>
-					<a href="#">Recipes</a>
-					<a href="#">Blogs</a>
-					<a href="#">Contact Us</a>
-					<div>
-						<i class="fa-solid fa-bell"></i>
-						<img src="/images/profile_image.svg" alt="profile_image" />
-						<i class="fa-solid fa-caret-down"></i>
-					</div>
-				</div>
-				<div class="menu"><i class="fa-solid fa-bars"></i></div>
-			</nav>
-			<nav class="sub_nav">
-				<a href="#" class="btn"
-					>Multilingual Support<i class="fa-solid fa-caret-down"></i
-				></a>
-				<!-- Button trigger modal -->
-				<button
-					type="button"
-					id="meal_planning_btn"
-					data-bs-toggle="modal"
-					data-bs-target="#exampleModal"
-				>
-					Meal Planning
-				</button>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/css/jollof_recipe.css" />
+	<title>Crave</title>
+</head>
 
-				<!-- Modal -->
-				<div
-					class="modal fade"
-					id="exampleModal"
-					tabindex="-1"
-					aria-labelledby="exampleModalLabel"
-					aria-hidden="true"
-				>
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div
-								class="modal-header d-flex align-items-center justify-content-center border border-0"
-							>
-								<img src="/images/logo.png" alt="logo" />
-							</div>
-							<div id="jinjar" class="py-3 text-center">
-								<h2 class="mb-0">Talk to Jinjar</h2>
-								<p class="mb-0 fs-6">your culinary companion</p>
-							</div>
-							<div class="modal-body py-3 text-center">
-								<h1>Welcome</h1>
-								<p>To enjoy crave's AI recipe generator</p>
-								<a
-									href="/html/pricing.html"
-									id="Subcribe"
-									class="btn w-25 m-auto text-center"
-									>Subcribe</a
-								>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- <a href="#">Meal Planning</a> -->
-				<a href="#">Nutritional Information</a>
-				<a href="#">Book a Class</a>
-				<a href="#" class="btn">Join Community</a>
-			</nav>
-			<div id="sub_nav_mobile_menu">
-				<a href="#">Meal Planning</a>
-				<a href="#">Book a Class</a>
-				<a href="#" class="btn"
-					>Multilingual Support <i class="fa-solid fa-caret-down"></i
-				></a>
-				<a href="#" class="btn">Join Community</a>
-			</div>
-			<div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
-		</header>
-		<main>
-			<section class="w-50 m-auto">
-				<div class="container m-auto d-flex flex-column justify-content-center">
-					<h2 class="my-4 text-center">Jollof Rice with Stew</h2>
-					<div class="d-flex justify-content-between">
-						<p>Posted by: LUKE</p>
-						<p>August 16, 2023</p>
-					</div>
-					<div class="mb-3 d-flex justify-content-between">
-						<div>
-							<span>4.5</span>
-							<img src="/images/Star.svg" alt="Star" />
-							<img src="/images/Star.svg" alt="Star" />
-							<img src="/images/Star.svg" alt="Star" />
-							<img src="/images/Star.svg" alt="Star" />
-							<img src="/images/Star.svg" alt="Star" />
-						</div>
-						<span class="">10 Ratings.</span>
-						<span>View 10 Ratings</span>
-					</div>
-					<img src="/images/jollof_rice.svg" alt="jollof_rice" />
-					<div class="d-flex justify-content-between align-items-center my-3">
-						<div class="dropdown">
-							<button
-								class="btn save-btn rounded-pill py-1 dropdown-toggle"
-								type="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								<i class="fa-regular fa-floppy-disk"></i>
-
-								Save
+<body>
+	<header>
+		<nav>
+			<img src="/images/logo.png" alt="logo" />
+			<div class="nav__links">
+				<a href="#">Home</a>
+				<a href="#">About Us</a>
+				<div class="dropdown">
+					<button class="border-0 bg-white fw-bold dropdown-toggle" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Category
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<button class="dropdown-item" type="button">
+								Types of Recipes
 							</button>
-							<div class="dropdown-menu px-3 py-2">
-								<h3>Your Collections</h3>
-								<div class="d-flex Collection mt-2 mb-4">
-									<p class="px-2 fw-bold mb-0">New Collection</p>
-									<a
-										href="#"
-										class="px-2 fw-bold text-decoration-none text-dark mb-0"
-										>ADD</a
-									>
-								</div>
-								<h5>Existing Collections</h5>
-								<div class="form-check">
-									<input
-										class="form-check-input"
-										type="checkbox"
-										value="Favorites"
-										id="Favorites"
-									/>
-									<label class="form-check-label" for="Favorites">
-										Favorites
-									</label>
-								</div>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Cooking Methods
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Dietary Preference
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Food Allergies
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Health Conditions
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="dropdown">
+					<button class="border-0 bg-white fw-bold" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Recipes
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="dropdown-item" href="/html/recipe.html"> African Reciepes</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="/html/intercontinental_recipes.html">Intercontinental
+								Reciepes</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#">Blogs</a>
+				<a href="#">Contact Us</a>
+
+				<div>
+					<a href="#"><i class="fa-solid fa-bell"></i></a>
+					<img src="/images/profile_image.svg" alt="profile_image" />
+					<a href="/html/account_settings.html"><i class="fa-solid fa-caret-down"></i></a>
+				</div>
+			</div>
+			<div id="mobile_menu">
+				<a href="#">Home</a>
+				<a href="#">About Us</a>
+				<div class="dropdown border-bottom border-dark">
+					<button class="btn ps-0 fw-bold dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						Category
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<button class="dropdown-item" type="button">
+								Types of Recipes
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Cooking Methods
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Dietary Preference
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Food Allergies
+							</button>
+						</li>
+						<li>
+							<button class="dropdown-item" type="button">
+								Health Conditions
+							</button>
+						</li>
+					</ul>
+				</div>
+				<a href="#">Recipes</a>
+				<a href="#">Blogs</a>
+				<a href="#">Contact Us</a>
+				<div>
+					<i class="fa-solid fa-bell"></i>
+					<img src="/images/profile_image.svg" alt="profile_image" />
+					<i class="fa-solid fa-caret-down"></i>
+				</div>
+			</div>
+			<div class="menu"><i class="fa-solid fa-bars"></i></div>
+		</nav>
+		<nav class="sub_nav">
+			<a href="#" class="btn">Multilingual Support<i class="fa-solid fa-caret-down"></i></a>
+			<!-- Button trigger modal -->
+			<button type="button" id="meal_planning_btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				Meal Planning
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header d-flex align-items-center justify-content-center border border-0">
+							<img src="/images/logo.png" alt="logo" />
+						</div>
+						<div id="jinjar" class="py-3 text-center">
+							<h2 class="mb-0">Talk to Jinjar</h2>
+							<p class="mb-0 fs-6">your culinary companion</p>
+						</div>
+						<div class="modal-body py-3 text-center">
+							<h1>Welcome</h1>
+							<p>To enjoy crave's AI recipe generator</p>
+							<a href="/html/pricing.html" id="Subcribe" class="btn w-25 m-auto text-center">Subcribe</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="/html/nutritional_info.html">Nutritional Information</a>
+			<a href="/html/book_a_class.html">Book a Class</a>
+			<a href="#" class="btn">Join Community</a>
+		</nav>
+		<div id="sub_nav_mobile_menu">
+			<a href="#">Meal Planning</a>
+			<a href="#">Book a Class</a>
+			<a href="#" class="btn">Multilingual Support <i class="fa-solid fa-caret-down"></i></a>
+			<a href="#" class="btn">Join Community</a>
+		</div>
+		<div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+	</header>
+	<main>
+		<section class="w-50 m-auto">
+			<div class="container m-auto d-flex flex-column justify-content-center">
+				<h2 class="my-4 text-center">Jollof Rice with Stew</h2>
+				<div class="d-flex justify-content-between">
+					<p>Posted by: LUKE</p>
+					<p>August 16, 2023</p>
+				</div>
+				<div class="mb-3 d-flex justify-content-between">
+					<div>
+						<span>4.5</span>
+						<img src="/images/Star.svg" alt="Star" />
+						<img src="/images/Star.svg" alt="Star" />
+						<img src="/images/Star.svg" alt="Star" />
+						<img src="/images/Star.svg" alt="Star" />
+						<img src="/images/Star.svg" alt="Star" />
+					</div>
+					<span class="">10 Ratings.</span>
+					<span>View 10 Ratings</span>
+				</div>
+				<img src="/images/jollof_rice.svg" alt="jollof_rice" />
+				<div class="d-flex justify-content-between align-items-center my-3">
+					<div class="dropdown">
+						<button class="btn save-btn rounded-pill py-1 dropdown-toggle" type="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							<i class="fa-regular fa-floppy-disk"></i>
+
+							Save
+						</button>
+						<div class="dropdown-menu px-3 py-2">
+							<h3>Your Collections</h3>
+							<div class="d-flex Collection mt-2 mb-4">
+								<p class="px-2 fw-bold mb-0">New Collection</p>
+								<a href="#" class="px-2 fw-bold text-decoration-none text-dark mb-0">ADD</a>
+							</div>
+							<h5>Existing Collections</h5>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="Favorites" id="Favorites" />
+								<label class="form-check-label" for="Favorites">
+									Favorites
+								</label>
 							</div>
 						</div>
-						<div class="d-flex align-items-center text-center">
-							<a
-								href="#"
-								class="save-btn text-decoration-none py-1 px-2 text-dark rounded-pill"
-								><img src="/images/Users.svg" alt="Users" /> Community</a
-							>
-						</div>
-						<div class="d-flex align-items-center text-center">
-							<a
-								href="#"
-								class="save-btn text-decoration-none py-1 px-2 text-dark rounded-pill"
-								><i class="fa-regular fa-message"></i> Review</a
-							>
-						</div>
 					</div>
-					<div
-						class="border d-flex justify-content-center align-items-center py-1 gap-3 mb-5"
-					>
-						<p class="mb-0 fs-5 fw-bold">Rate this Recipe :</p>
-						<div>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-regular fa-star"></i>
-							<i class="fa-regular fa-star"></i>
-						</div>
+					<div class="d-flex align-items-center text-center">
+						<a href="#" class="save-btn text-decoration-none py-1 px-2 text-dark rounded-pill"><img
+								src="/images/Users.svg" alt="Users" /> Community</a>
 					</div>
-					<h3>Publisher’s Remark</h3>
-					<p>
-						Discover the rich and flavorful world of Jollof Rice in this
-						exquisite post. Dive into the heart of West African cuisines with
-						this collection of mouthwatering recipes, culinary tips and cultural
-						insights. Whether you are a seasoned chef or novice in the kitchen.
-						Our Jollof Rice recipe is a passport to a world of taste and
-						tradition. Get ready to savor the tantalizing aromas and vibrant
-						flavors that make Jollof Rice a beloved dish worldwide. Indulge this
-						culinary adventure and let your taste buds travel to the heart of
-						West Africa.
-					</p>
+					<div class="d-flex align-items-center text-center">
+						<a href="#" class="save-btn text-decoration-none py-1 px-2 text-dark rounded-pill"><i
+								class="fa-regular fa-message"></i> Review</a>
+					</div>
 				</div>
-			</section>
-			<section class="container mb-5">
-				<div class="my-3 text-center">
-					<h3>Top Rated Professional Chefs</h3>
-					<div
-						class="d-flex justify-content-between align-items-center px-3 mb-2"
-						id="top_chefs"
-					></div>
+				<div class="border d-flex justify-content-center align-items-center py-1 gap-3 mb-5">
+					<p class="mb-0 fs-5 fw-bold">Rate this Recipe :</p>
 					<div>
-						<a
-							href="#"
-							class="save-btn text-white text-decoration-none py-1 px-3 fw-bold text-dark rounded-pill"
-							>Find More Chefs</a
-						>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-solid fa-star"></i>
+						<i class="fa-regular fa-star"></i>
+						<i class="fa-regular fa-star"></i>
 					</div>
 				</div>
-			</section>
-			<section class="w-50 m-auto mt-5">
-				<h3 class="mb-2">Watch the Video</h3>
-				<div class="container mb-2">
-					<iframe
-						width="560"
-						height="315"
-						src="https://www.youtube.com/embed/z4tNAyRdo70?si=QB-WlW6srRO-h2od"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-				</div>
-				<h4>Read Instruction for cooking.</h4>
-				<h5>Ingredients</h5>
-				<p>2 Cup long grain parboiled rice</p>
-				<p>1/4 Cup of vegetable oil</p>
-				<p>1 onion, finely chopped</p>
-				<p>2-3 clove garlic, minced</p>
-				<p>1 red bell pepper, finely chopped</p>
-				<p>2 Cup long grain parboiled rice</p>
-				<p>1 green bell pepper, finely chopped</p>
-				<p>1 can (14 oz) diced tomatoes or 4 fresh tomatoes, bended</p>
-				<p>1 teaspoon tomato paste</p>
-				<p>1 teaspoon paprika</p>
-				<p>1 teaspoon thyme</p>
-				<p>1 teaspoon curry powder</p>
-				<p>1 teaspoon cayenne pepper (adjust to your spice preference)</p>
-				<p>1 teaspoon white pepper</p>
-				<p>2 cups chicken or vegetable broth</p>
-				<p>2 cups chicken or vegetable broth</p>
-				<p>1 bay leaf</p>
-				<p>Salt to taste</p>
-				<p class="mt-2">
-					Optional: 1/2 cup cooked and shredded chicken or other protein (e.g
-					Shrimp)
+				<h3>Publisher’s Remark</h3>
+				<p>
+					Discover the rich and flavorful world of Jollof Rice in this
+					exquisite post. Dive into the heart of West African cuisines with
+					this collection of mouthwatering recipes, culinary tips and cultural
+					insights. Whether you are a seasoned chef or novice in the kitchen.
+					Our Jollof Rice recipe is a passport to a world of taste and
+					tradition. Get ready to savor the tantalizing aromas and vibrant
+					flavors that make Jollof Rice a beloved dish worldwide. Indulge this
+					culinary adventure and let your taste buds travel to the heart of
+					West Africa.
 				</p>
-			</section>
-			<section class="my-4 text-center">
-				<h3 class="fw-bold">Find More Recipes</h3>
-				<div class="my-4 m-auto">
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/HwnXF_EpON4?si=Lz17dGF4t34srf07"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/CjbAltYAl2E?si=CX8ARcdHCRY-FBpb"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/jNkmppw4FzY?si=d7JwBVj7PPU6_9C3"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/jjZxpuRE31k?si=HTnY8dSz2oiaUT0J"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/Ha9xjBYalgk?si=ho6LUrevXdESk6IX"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-					<iframe
-						width="210.312"
-						height="104.973"
-						src="https://www.youtube.com/embed/RivD2AicW9U?si=yZU0BGc0HG_6ZHHl"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowfullscreen
-					></iframe>
-				</div>
-				<p>Expand your culinary experience by watching additional videos</p>
-				<div class="review_card rounded my-5">
-					<h3 class="pt-5">Explore Reviews</h3>
-					<p>Your Key to Informed Choices...</p>
-					<img src="/images/review_icon.svg" alt="review_icon" class="py-4" />
-					<div class="pt-3">
-						<a
-							href="#"
-							class="btn rounded-pill review_btn text-decoration-none text-dark text-center"
-							><i class="fa-regular fa-message"></i> Review</a
-						>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="px-5">
-			<img src="/images/logo.png" alt="logo" class="bg-white rounded my-4" />
-			<div class="d-flex justify-content-between align-items-start">
-				<div class="d-flex flex-column footer-list">
-					<h3>Categories</h3>
-					<a href="#">Types of Recipes</a>
-					<a href="#">Cooking Methods</a>
-					<a href="#">Dietary Preference</a>
-					<a href="#">Food Allergies</a>
-					<a href="#">Health Conditions</a>
-					<a href="#">Blogs</a>
-					<a href="#">Meal Planner</a>
-					<a href="#">Join Community</a>
-				</div>
-				<div class="d-flex flex-column footer-list">
-					<h3 class="text-center">Contact</h3>
-					<p>
-						<img src="/images/location.png" alt="location_icon" /> Address : No
-						29 Adamolekun Street, Ajah Lagos State Nigeria
-					</p>
-					<p>
-						<img src="/images/Phone.png" alt="Phone_icon" /> Phone: +234
-						8123410961
-					</p>
-					<p>
-						<img src="/images/Email.png" alt="Email_icon" /> Email :
-						Project.thecrave@gmail.com
-					</p>
-				</div>
-				<div class="footer-list text-center">
-					<button>Subscribe to Newsletter</button>
-					<p>Connect with Us</p>
-					<img src="/images/Facebook - png.png" alt="Facebook_icon" />
-					<img src="/images/Instagram - jpeg.png" alt="Instagram_icon" />
-					<img src="/images/twitter logo 1.png" alt="twitter_icon" />
+			</div>
+		</section>
+		<section class="container mb-5">
+			<div class="my-3 text-center">
+				<h3>Top Rated Professional Chefs</h3>
+				<div class="d-flex justify-content-between align-items-center px-3 mb-2" id="top_chefs"></div>
+				<div>
+					<a href="#"
+						class="save-btn text-white text-decoration-none py-1 px-3 fw-bold text-dark rounded-pill">Find
+						More Chefs</a>
 				</div>
 			</div>
-			<div class="py-3">
-				<label for="Newsletter_email" class="me-3 text-white"
-					>Enter your email to get recipes of the day</label
-				>
-				<input
-					type="email"
-					id="Newsletter_email"
-					placeholder="Enter your email"
-					class="rounded w-25"
-				/>
-				<button class="Newsletter">Submit</button>
+		</section>
+		<section class="w-50 m-auto mt-5">
+			<h3 class="mb-2">Watch the Video</h3>
+			<div class="container mb-2">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/z4tNAyRdo70?si=QB-WlW6srRO-h2od"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
 			</div>
-			<p class="text-center text-white mb-0 py-3">
-				Copyright 2019-2023 Crave - All rights reserved.
+			<h4>Read Instruction for cooking.</h4>
+			<h5>Ingredients</h5>
+			<p>2 Cup long grain parboiled rice</p>
+			<p>1/4 Cup of vegetable oil</p>
+			<p>1 onion, finely chopped</p>
+			<p>2-3 clove garlic, minced</p>
+			<p>1 red bell pepper, finely chopped</p>
+			<p>2 Cup long grain parboiled rice</p>
+			<p>1 green bell pepper, finely chopped</p>
+			<p>1 can (14 oz) diced tomatoes or 4 fresh tomatoes, bended</p>
+			<p>1 teaspoon tomato paste</p>
+			<p>1 teaspoon paprika</p>
+			<p>1 teaspoon thyme</p>
+			<p>1 teaspoon curry powder</p>
+			<p>1 teaspoon cayenne pepper (adjust to your spice preference)</p>
+			<p>1 teaspoon white pepper</p>
+			<p>2 cups chicken or vegetable broth</p>
+			<p>2 cups chicken or vegetable broth</p>
+			<p>1 bay leaf</p>
+			<p>Salt to taste</p>
+			<p class="mt-2">
+				Optional: 1/2 cup cooked and shredded chicken or other protein (e.g
+				Shrimp)
 			</p>
-		</footer>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-			crossorigin="anonymous"
-		></script>
-		<script src="/javascript/jollof_recipe.js"></script>
-	</body>
+		</section>
+		<section class="my-4 text-center">
+			<h3 class="fw-bold">Find More Recipes</h3>
+			<div class="my-4 m-auto">
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/HwnXF_EpON4?si=Lz17dGF4t34srf07" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/CjbAltYAl2E?si=CX8ARcdHCRY-FBpb" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/jNkmppw4FzY?si=d7JwBVj7PPU6_9C3" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/jjZxpuRE31k?si=HTnY8dSz2oiaUT0J" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/Ha9xjBYalgk?si=ho6LUrevXdESk6IX" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+				<iframe width="210.312" height="104.973"
+					src="https://www.youtube.com/embed/RivD2AicW9U?si=yZU0BGc0HG_6ZHHl" title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+			</div>
+			<p>Expand your culinary experience by watching additional videos</p>
+			<div class="review_card rounded my-5">
+				<h3 class="pt-5">Explore Reviews</h3>
+				<p>Your Key to Informed Choices...</p>
+				<img src="/images/review_icon.svg" alt="review_icon" class="py-4" />
+				<div class="pt-3">
+					<a href="#" class="btn rounded-pill review_btn text-decoration-none text-dark text-center"><i
+							class="fa-regular fa-message"></i> Review</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="px-5">
+		<img src="/images/logo.png" alt="logo" class="bg-white rounded my-4" />
+		<div class="d-flex justify-content-between align-items-start">
+			<div class="d-flex flex-column footer-list">
+				<h3>Categories</h3>
+				<a href="#">Types of Recipes</a>
+				<a href="#">Cooking Methods</a>
+				<a href="#">Dietary Preference</a>
+				<a href="#">Food Allergies</a>
+				<a href="#">Health Conditions</a>
+				<a href="#">Blogs</a>
+				<a href="#">Meal Planner</a>
+				<a href="#">Join Community</a>
+			</div>
+			<div class="d-flex flex-column footer-list">
+				<h3 class="text-center">Contact</h3>
+				<p>
+					<img src="/images/location.png" alt="location_icon" /> Address : No
+					29 Adamolekun Street, Ajah Lagos State Nigeria
+				</p>
+				<p>
+					<img src="/images/Phone.png" alt="Phone_icon" /> Phone: +234
+					8123410961
+				</p>
+				<p>
+					<img src="/images/Email.png" alt="Email_icon" /> Email :
+					Project.thecrave@gmail.com
+				</p>
+			</div>
+			<div class="footer-list text-center">
+				<button>Subscribe to Newsletter</button>
+				<p>Connect with Us</p>
+				<img src="/images/Facebook - png.png" alt="Facebook_icon" />
+				<img src="/images/Instagram - jpeg.png" alt="Instagram_icon" />
+				<img src="/images/twitter logo 1.png" alt="twitter_icon" />
+			</div>
+		</div>
+		<div class="py-3">
+			<label for="Newsletter_email" class="me-3 text-white">Enter your email to get recipes of the day</label>
+			<input type="email" id="Newsletter_email" placeholder="Enter your email" class="rounded w-25" />
+			<button class="Newsletter">Submit</button>
+		</div>
+		<p class="text-center text-white mb-0 py-3">
+			Copyright 2019-2023 Crave - All rights reserved.
+		</p>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+	</script>
+	<script src="/javascript/jollof_recipe.js"></script>
+</body>
+
 </html>
