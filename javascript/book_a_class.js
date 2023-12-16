@@ -3,6 +3,7 @@ const cardsData = [
     image: "/images/Gordon_Ramsay.svg",
     chefName: "Gordon Ramsay",
     restaurant: "GR Restaurants San Frascisco.",
+	  link: "/html/chef's_profile.html",
   },
   {
     image: "/images/Thomas_Keller.svg",
@@ -87,7 +88,7 @@ function displayCards() {
     return `
         <div class="chef my-4 ">
 				<img src="${cardsData.image}" alt="Gordon_Ramsay" />
-				<h5 class="my-2">${cardsData.chefName}</h5>
+				<a href="${cardsData.link}" class="my-2 text-decoration-none text-black">${cardsData.chefName}</a>
 				<p>${cardsData.restaurant}</p>
 				<a	href="#" class="save-btn text-white text-decoration-none py-1 px-3 fw-bold text-dark rounded-pill"	>View Profile</a>
 			</div>
