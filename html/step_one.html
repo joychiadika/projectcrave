@@ -20,9 +20,10 @@
 			href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="/css/home.css" />
+		<link rel="stylesheet" href="/css/chef's_profile.css" />
 		<title>Crave</title>
 	</head>
+
 	<body>
 		<header>
 			<nav>
@@ -32,7 +33,7 @@
 					<a href="#">About Us</a>
 					<div class="dropdown">
 						<button
-							class="btn fw-bold dropdown-toggle"
+							class="border-0 bg-white fw-bold dropdown-toggle"
 							data-bs-toggle="dropdown"
 							aria-expanded="false"
 						>
@@ -66,14 +67,39 @@
 							</li>
 						</ul>
 					</div>
-					<a href="#">Recipes</a>
+					<div class="dropdown">
+						<button
+							class="border-0 bg-white fw-bold"
+							type="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+						>
+							Recipes
+						</button>
+						<ul class="dropdown-menu">
+							<li>
+								<a class="dropdown-item" href="/html/recipe.html">
+									African Reciepes</a
+								>
+							</li>
+							<li>
+								<a
+									class="dropdown-item"
+									href="/html/intercontinental_recipes.html"
+									>Intercontinental Reciepes</a
+								>
+							</li>
+						</ul>
+					</div>
 					<a href="#">Blogs</a>
 					<a href="#">Contact Us</a>
 
 					<div>
 						<a href="#"><i class="fa-solid fa-bell"></i></a>
 						<img src="/images/profile_image.svg" alt="profile_image" />
-						<i class="fa-solid fa-caret-down"></i>
+						<a href="/html/account_settings.html"
+							><i class="fa-solid fa-caret-down"></i
+						></a>
 					</div>
 				</div>
 				<div id="mobile_menu">
@@ -128,145 +154,80 @@
 			</nav>
 			<nav class="sub_nav">
 				<a href="#" class="btn"
-					>Switch Language<i class="fa-solid fa-caret-down"></i
+					>Multilingual Support<i class="fa-solid fa-caret-down"></i
 				></a>
-				<a href="#">Meal Planning</a>
-				<a href="#">Book a Class</a>
+				<!-- Button trigger modal -->
+				<button
+					type="button"
+					id="meal_planning_btn"
+					data-bs-toggle="modal"
+					data-bs-target="#exampleModal"
+				>
+					Meal Planning
+				</button>
+
+				<!-- Modal -->
+				<div
+					class="modal fade"
+					id="exampleModal"
+					tabindex="-1"
+					aria-labelledby="exampleModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div
+								class="modal-header d-flex align-items-center justify-content-center border border-0"
+							>
+								<img src="/images/logo.png" alt="logo" />
+							</div>
+							<div id="jinjar" class="py-3 text-center">
+								<h2 class="mb-0">Talk to Jinjar</h2>
+								<p class="mb-0 fs-6">your culinary companion</p>
+							</div>
+							<div class="modal-body py-3 text-center">
+								<h1>Welcome</h1>
+								<p>To enjoy crave's AI recipe generator</p>
+								<a
+									href="/html/pricing.html"
+									id="Subcribe"
+									class="btn w-25 m-auto text-center"
+									>Subcribe</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <a href="#">Meal Planning</a> -->
+				<a href="/html/nutritional_info.html">Nutritional Information</a>
+				<a href="/html/book_a_class.html">Book a Class</a>
 				<a href="#" class="btn">Join Community</a>
 			</nav>
 			<div id="sub_nav_mobile_menu">
 				<a href="#">Meal Planning</a>
 				<a href="#">Book a Class</a>
 				<a href="#" class="btn"
-					>Switch Language <i class="fa-solid fa-caret-down"></i
+					>Multilingual Support <i class="fa-solid fa-caret-down"></i
 				></a>
 				<a href="#" class="btn">Join Community</a>
 			</div>
 			<div class="sub_menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
 		</header>
-		<main>
-			<section class="hero px-5 d-flex justify-content-end align-items-center">
-				<div class="pe-5">
-					<h1 class="text-center">Welcome to Crave</h1>
-					<p class="text-center">
-						From mouthwatering appetizers to decadent desserts. 0ur menus are
-						designed to delight every palate. Experience the art of dining at
-						its finest...
-					</p>
-					<p class="text-end">
-						<i class="fa-solid fa-circle-play"></i> Watch Video
-					</p>
-				</div>
-			</section>
-			<section class="px-5">
-				<div class="d-flex justify-content-between align-items-end">
-					<p class="fw-bold fs-5">Want Yummy Recipes ?</p>
-					<img src="/images/Chatbot Icon.svg" alt="Chatbot icon" />
-				</div>
-				<select
-					name="search"
-					id="search"
-					class="w-100 rounded-pill px-3 py-1 my-3"
-				>
-					<option value="What do you have in your Kitchen ?">
-						What do you have in your Kitchen ?
-					</option>
-					<option value="General Recipes">General Recipes</option>
-				</select>
-				<h2 class="my-5 text-center">Your Journey with Crave</h2>
-				<div class="d-flex gap-5 flex-wrap my-5">
-					<div class="card border border-0" style="width: 596px">
-						<img src="/images/explore.svg" class="card-img-top" alt="explore" />
-						<div class="card-body">
-							<p class="card-text">
-								Explore and learn how to cook new dishes from our professional
-								chefs as a novice or experienced cook.
-							</p>
-						</div>
-					</div>
-					<div class="card border border-0" style="width: 596px">
-						<img
-							src="/images/get-recipes.svg"
-							class="card-img-top"
-							alt="get-recipes"
-						/>
-						<div class="card-body">
-							<p class="card-text">
-								Get recipes based on the ingredients in your kitchen.
-							</p>
-						</div>
-					</div>
-					<div class="card border border-0" style="width: 596px">
-						<img src="/images/select.svg" class="card-img-top" alt="select" />
-						<div class="card-body">
-							<p class="card-text">
-								Select your meals based on dietary preferences, food allergies
-								or health conditions.
-							</p>
-						</div>
-					</div>
-					<div class="card border border-0" style="width: 596px">
-						<img
-							src="/images/with-crave.svg"
-							class="card-img-top"
-							alt="with-crave"
-						/>
-						<div class="card-body">
-							<p class="card-text">
-								With Crave, you get to create personalized meal plans.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section
-				class="highlights d-flex flex-column align-items-center justify-content-center"
-			>
-				<h2 class="mb-5">Recipes of the week</h2>
-				<div
-					class="card_container mb-4 d-flex text-center align-items-center justify-content-center"
-				>
+		<main class="my-5 px-5">
+			<section>
+				<div class="d-flex justify-content-between align-items-center">
+					<p>STEP 1 of 3</p>
 					<a
-						href="/html/jollof_recipe.html"
-						class="text-decoration-none fw-bold fs-5"
-						>I'm interested</a
-					>
+						href="/html/chef's_profile.html"
+						class="text-decoration-none text-dark"
+						><i class="fa-solid fa-xmark"></i
+					></a>
 				</div>
-				<button class="mt-5 border-0 px-4 py-1 text-white rounded-pill">
-					Learn More
-				</button>
-			</section>
-			<section class="blog py-5 px-5">
-				<h2 class="fw-bold text-center">Blogs</h2>
-				<div class="d-flex flex-md-row gap-3 my-5 flex-column">
-					<div class="d-flex align-items-center gap-4">
-						<img src="/images/Recipes.svg" alt="recipe_blog" />
-						<div>
-							<h5 class="fw-bold">Recipes Modification</h5>
-							<p>
-								Show how to adapt classic recipes for various dietary
-								preference.
-							</p>
-						</div>
-					</div>
-					<div class="d-flex align-items-center gap-4">
-						<img src="/images/Recipes.svg" alt="recipe_blog" />
-						<div>
-							<h5 class="fw-bold">Cuisine Explorations</h5>
-							<p>Explore and create recipes from different world cuisines.</p>
-						</div>
-					</div>
-					<div class="d-flex align-items-center gap-4">
-						<img src="/images/Recipes.svg" alt="recipe_blog" />
-						<div>
-							<h5 class="fw-bold">Healthy Eating</h5>
-							<p>
-								Share nutritious recipes, cooking hacks and tips for maintaining
-								a healthy diet.
-							</p>
-						</div>
-					</div>
-				</div>
+				<p>
+					Select date and time <br />
+					In your local timezone (Africa/Lagos) Update
+				</p>
+                
 			</section>
 		</main>
 		<footer class="px-5">
@@ -327,6 +288,6 @@
 			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 			crossorigin="anonymous"
 		></script>
-		<script src="/javascript/recipe_database.js"></script>
+		<script src="/javascript/step_one.js"></script>
 	</body>
 </html>
